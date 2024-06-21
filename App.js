@@ -1,21 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Button, TouchableOpacity, SafeAreaView } from 'react-native';
+import { FlatlistDemo } from './src/FlatlistDemo'
+import { MyStack } from './src/MyStack'
+import { MyProduct } from './src/MyProduct';
+export default function App({ navigation, route }) {
+  const [ShowScreen, SetShowScreen] = useState(false);
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <MyStack/>
   );
-}
 
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
+  touchable: {
+
+  }
 });
